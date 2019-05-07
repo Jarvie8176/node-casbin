@@ -49,6 +49,7 @@ test('test regexMatchFunc', () => {
 test('test keyMatchFunc', () => {
   expect(util.keyMatchFunc('/foo/bar', '/foo/*')).toEqual(true);
   expect(util.keyMatchFunc('/bar/foo', '/foo/*')).toEqual(false);
+  expect(util.keyMatchFunc('alice:res:A', 'alice:*:B')).toEqual(false);
 });
 
 test('test keyMatch2Func', () => {
